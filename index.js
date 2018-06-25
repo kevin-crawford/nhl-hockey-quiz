@@ -1,104 +1,4 @@
-const STORE = [
-  { 
-    question: 'Which official has the final decision in matters of disputed goals?',
-    answers: [
-    'Video Goal Judge',
-    'Linesman', 
-    'Referee', 
-    'Goal Judge'],
-    correctAnswer: 'Referee'
-  },
-  {
-    question: 'A player is allowed to direct the puck to a teammate with an open hand, also known as a hand pass, if:',
-    answers: [
-      'Both players are in their defensive zone',
-      'Both players are in the neutral zone',
-      'The pass originates in the defensive zone',
-      'This is never allowed'
-      ],
-      correctAnswer: 'Both players are in their defensive zone',
-  },
-  {
-    question: 'If a delayed penalty is signaled by the referee and the non-offending team subsequently ices the puck, where does the face off take place?',
-    answers: [
-      'At the end face-off spot of the team icing the puck',
-      'At center ice',
-      'At the end zone face-off spot of the team who committed the penalty',
-      'In the neutral zone near the defending blue line of the team icing the puck'
-      ],
-      correctAnswer: 'In the neutral zone near the defending blue line of the team icing the puck',
-  },
-  {
-    question: 'In which of the following situations would a goal NOT be allowed?',
-    answers: [
-      'When the puck is deflected directly into the net off a teammate',
-     'When the puck is deflected directly into the net off an official',
-    'When the puck is deflected directly into the net off a player of the opposing team',
-    'When the puck is deflected directly into the net off a dropped stick'
-    ],
-    correctAnswer: 'When the puck is deflected directly into the net off an official',
-  },
-  {
-    question: 'A goalkeeper is not allowed to participate in the play in any manner where?',
-    answers: [
-      'Inside the face-off circles',
-      'Beyond the blue line indicating his defensive zone',
-      'Beyond the center red line',
-      'Behind his own net'
-      ],
-    correctAnswer: 'Beyond the center red line',
-  },
-  {
-    question: 'The 12-inch wide blue lines are considered part of what zone?',
-    answers: [
-      'Whatever zone the puck is in',
-      'No man\'s land',
-      'The end zones',
-      'None - the line itself is separate from any zone'
-      ],
-    correctAnswer: 'Whatever zone the puck is in',
-  },
-  {
-    question: 'According to the USA Hockey Rule Book, what is the act of a player swinging his stick at an opponent, whether contact is made, or not?',
-    answers: [
-      'Hooking',
-      'Slashing',
-      'Spearing',
-      'Diving'
-      ],
-    correctAnswer: 'Slashing',
-  },
-  {
-    question: 'If a player prevents an opponent who has dropped his stick or any other piece of equipment from regaining possession of it, what is the proper penalty?',
-    answers: [
-      'Unsportsmanlike conduct',
-      'Interference',
-      'Misconduct',
-      'Holding'
-      ],
-    correctAnswer: 'Interference',
-  },
-  {
-    question: 'A team has two players serving penalties. A third player is subsequently called for a penalty. What happens?',
-    answers: [
-      'The player goes to the penalty box, a substitute takes his place on the ice, and his penalty time begins immediately',
-      'The player goes to the penalty box, a substitute takes his place on the ice, and his penalty time does not begin until one of the other penalties expires',
-      'The player goes to the penalty box, the team\'s numerical strength is further reduced by one, and his penalty time begins immediately',
-      'The other team is awarded a penalty shot'
-      ],
-    correctAnswer: 'The player goes to the penalty box, a substitute takes his place on the ice, and his penalty time does not begin until one of the other penalties expires',
-  },
-  {
-    question: 'The signal given for a misconduct penalty is:',
-    answers: [
-      'Palm of hand on head',
-      'Making a "T" sign with the hands',
-      'Both hands on hips',
-      'One arm raised'
-      ],
-    correctAnswer: 'Both hands on hips',
-  },
-  ];
+
   
   let questionNum = 0;
   let goalsScored = 0;
@@ -146,9 +46,12 @@ const STORE = [
   // compiles HTML question form in JQUERY
   function createQuestion() {
     return `<div class="question-menu">
-    <h2>${STORE[questionNum].question}</h2>
+   
    <form id="js-question-form" class="question-form">
-    <fieldset name="question-field">
+    <fieldset role="radiogroup" aria-labelledby="answer" name="question-field">
+     <legend>
+    <h1 class="question">${STORE[questionNum].question}</h1>
+    </legend>
       <label class="answer-option">
       <input type="radio" value="${STORE[questionNum].answers[0]}" name="answer" required />
         <span>${STORE[questionNum].answers[0]}</span><br>
@@ -165,8 +68,8 @@ const STORE = [
       <input type="radio" value="${STORE[questionNum].answers[3]}" name="answer" required />
         <span>${STORE[questionNum].answers[3]}</span><br>
       </label>
-    <button type="submit" class="submit-button">SUBMIT</button>
       </fieldset>
+    <button type="submit" class="submit-button">SUBMIT</button>
     </form>
   </div>`;
   }
@@ -217,9 +120,9 @@ const STORE = [
   function correctAnswerFeedback () {
     return `<div class="feedback-menu">
     <img src="http://jingletree.com/minnmixnew/images/siren.gif" alt="hockey-goal-siren">
-        <h2>
+        <h1>
           Correct!
-        </h2>
+        </h1>
         <p>The correct answer was "${STORE[questionNum].correctAnswer}"</p>
         <button type="button" class="next-button">NEXT</button>
         </div>`;
@@ -228,9 +131,9 @@ const STORE = [
   // generates incorrectAnswerFeedback
   function incorrectAnswerFeedback () {
     return `<div class="feedback-menu">
-        <h2>
+        <h1>
           Oops! Better luck next time.
-        </h2>
+        </h1>
         <p>The correct answer was "${STORE[questionNum].correctAnswer}" </p>
         <button type="button" class="next-button">NEXT</button>
     </div>`;
@@ -258,9 +161,9 @@ const STORE = [
     $('.feedback-menu').remove();
     $('.question-feedback-target').html(`<div class="results-menu">
       <img id="finished-quiz-img" src="https://static.tumblr.com/0ff1d35c32bd472d78be3a4cb5279812/fjhd4ng/pAIn5fyqw/tumblr_static_filename_640_v2.jpg" alt="hockey celly">
-        <h2>
-          Congratulations!
-        </h2>
+        <h1>
+          Thanks For Playing!
+        </h1>
         <p>You scored ${goalsScored} goals on 10 attempts.</p>
         <button type="button" class="restart-button">Restart Quiz?</button>
     </div>`);
