@@ -1,0 +1,203 @@
+/* GLOBAL STYLING */
+
+
+body {
+  padding:60px 0 0;
+  text-align: center;
+  background: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/hockey-rink-background-12.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+
+/* HEADER STYLING */
+
+header {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-logo {
+  width: 125px;
+  height: 125px;
+  display: inline;
+  margin-bottom: 20px;
+}
+
+.scoreboard {
+  margin-top: 5px;
+}
+
+
+
+ header ul li {
+  padding: 5px 5px;
+  width: 175px;
+  display: inline-block;
+  margin-bottom: 5px;
+  border-radius: 50px 30px;
+  border: 5px double black;
+  background-color: white;
+  list-style-type: none;
+  font-size: 14px;
+  font-family: 'Muli', serif;
+  font-weight: 500;
+}
+
+
+
+
+
+/* START MENU STYLING */
+
+main div {
+  margin: 20px auto;
+}
+
+.start-menu {
+  margin: 45px auto;
+  padding: 30px;
+  width: 400px;
+  border: 6px dashed grey;
+  border-radius: 4px;
+  background: white;
+  display: block;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+h1 {
+ font-size: 26px; 
+ text-align: center;
+}
+ 
+/* BUTTON STYLING */
+
+button {
+  padding: 10px 20px;
+  margin: 15px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #3399ff;
+  font-size: 18px;
+ 
+}
+
+button:hover, button:focus {
+  background-color: #363946;
+  color: #ebca52
+}
+
+/* QUESTIONS MENU STYLING */
+
+.question-menu {
+  margin-top: 45px auto;
+  width: 400px;
+  background: white;
+  text-align: center;
+  font-family: 'Lora', serif;
+  border-radius: 4px;
+  border: 6px dashed grey;
+}
+
+h2 {
+  padding: 15px 15px;
+  text-align: left;
+  font-size: 20px;
+}
+
+
+.question-form h2 {
+  padding: 10px 10px;
+  text-align: left;
+}
+
+form {
+  margin: auto 20px;
+}
+
+label {
+  cursor: pointer;
+  margin-left: 3px;
+  display: flex;
+}
+
+input {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+span {
+  flex: 1 1 auto;
+}
+
+.answer-option {
+ line-height: 1.5;
+ text-align: left;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+.answer-option {
+  margin-bottom: 10px;
+}
+
+/* FEEDBACK MENU STYLING */
+
+.feedback-menu {
+  margin: 45px auto;
+  padding: 30px;
+  width: 300px;
+  border: 6px dashed grey;
+  border-radius: 4px;
+  background: white;
+  display: block;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+.feedback-menu img {
+  width: 120px;
+  height: auto;
+  margin-top: 15px;
+}
+
+.feedback-menu h2 {
+  text-align: center;
+}
+
+
+/* RESULTS MENU STYLING */
+.results-menu {
+  margin: 45px auto;
+  padding: 30px;
+  width: 300px;
+  border: 6px dashed grey;
+  border-radius: 4px;
+  background: white;
+  display: block;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+#finished-quiz-img {
+  width: 200px;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px 10px;
+}
+
+.results-menu h2 {
+  text-align: center;
+}
+
+
+

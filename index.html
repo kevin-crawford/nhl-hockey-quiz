@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="10 question quiz to test your knowledge of current National Hockey and USA hockey rules.">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="float-grid.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora|Muli" rel="stylesheet">
+    
+    
+  </head>
+  <body>
+    
+    <header role="banner">
+      <div class="scoreboard">
+          <img class="header-logo" src="https://i1.wp.com/puckplanet.com/wp-content/uploads/2017/06/nhl-logo.png?ssl=1" alt="NHL official logo">
+       <ul>
+         <li>Question: <span class="question-current">0</span> of 10</li>
+        <li>Goals Scored: <span class="scored">0</span></li>
+        </ul>
+      </div>
+    </header>
+    
+    <main role="main">
+      <div class="start-menu">
+        <h1>
+          NHL Hockey Rules Quiz
+        </h1>
+        <p>How well do you know the rules?</p>
+        <button type="button" class="start-button">START</button>
+      </div>
+      
+      <!-- QUESTION MENU/feedback/results PAGE ELEMENT GENERATES BELOW-->
+      <div class="question-feedback-target"></div>
+    
+    </main>
+    
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    
+  </body>
+</html>
