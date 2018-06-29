@@ -48,24 +48,24 @@
     return `<div class="question-menu">
    
    <form id="js-question-form" class="question-form">
-    <fieldset role="radiogroup" aria-labelledby="answer" name="question-field">
+    <fieldset role="radiogroup" aria-labelledby="js-question-form" name="question-field">
      <legend>
     <h1 class="question">${STORE[questionNum].question}</h1>
     </legend>
-      <label class="answer-option">
-      <input type="radio" value="${STORE[questionNum].answers[0]}" name="answer" required />
+      <label class="answer-option" id="answer1">
+      <input type="radio" aria-labelledby="answer1 js-question-form" value="${STORE[questionNum].answers[0]}" name="answer" required />
         <span>${STORE[questionNum].answers[0]}</span><br>
      </label>
-      <label class="answer-option">
-      <input type="radio" value="${STORE[questionNum].answers[1]}" name="answer" required />
+      <label class="answer-option" id="answer2">
+      <input type="radio" aria-labelledby="answer2 js-question-form" value="${STORE[questionNum].answers[1]}" name="answer" required />
         <span>${STORE[questionNum].answers[1]}</span><br>
       </label>
-       <label class="answer-option">
-      <input type="radio" value="${STORE[questionNum].answers[2]}" name="answer" required />
+       <label class="answer-option" id="answer3">
+      <input type="radio" aria-labelledby="answer3 js-question-form" value="${STORE[questionNum].answers[2]}" name="answer" required />
         <span>${STORE[questionNum].answers[2]}</span><br>
       </label>
-      <label class="answer-option">
-      <input type="radio" value="${STORE[questionNum].answers[3]}" name="answer" required />
+      <label class="answer-option" id="answer4">
+      <input type="radio" aria-labelledby="answer4 js-question-form" value="${STORE[questionNum].answers[3]}" name="answer" required />
         <span>${STORE[questionNum].answers[3]}</span><br>
       </label>
       </fieldset>
